@@ -1,11 +1,11 @@
 import React from "react";
 
 const FloatingHearts = () => {
-  const hearts = ["💖", "💕", "💗", "💝", "❤️", "🧡", "💛", "💚", "💙", "💜"];
+  const emojis = ["🎈", "🎊", "✨", "🌟", "💫", "🎁", "🌈", "🦄", "🎭", "🎪"];
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      {hearts.map((heart, index) => (
+      {emojis.map((emoji, index) => (
         <div
           key={index}
           className={`absolute text-2xl animate-bounce opacity-20 hover:opacity-40 transition-opacity duration-300`}
@@ -16,7 +16,7 @@ const FloatingHearts = () => {
             animationDuration: `${2 + Math.random() * 2}s`,
           }}
         >
-          {heart}
+          {emoji}
         </div>
       ))}
     </div>
